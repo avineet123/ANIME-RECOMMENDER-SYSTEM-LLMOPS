@@ -111,7 +111,7 @@ A **Large Language Model (LLM)-powered Anime Recommender System** built using **
 | NodePort     | Expose on VM IP + specific port | `http://<VM-IP>:<NodePort>`          |
 | LoadBalancer | Internet-facing deployment      | GCP auto-assigns external IP address |
 
-**🔑 Production Tip**: Use `LoadBalancer` for real deployments.
+** Production Tip**: Use `LoadBalancer` for real deployments.
 
 ---
 
