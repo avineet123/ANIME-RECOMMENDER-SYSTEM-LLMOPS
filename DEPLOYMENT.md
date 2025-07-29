@@ -124,6 +124,7 @@ When prompted for credentials:
 - **Password:** Your GitHub Personal Access Token
 
 > 💡 **Tip:** Generate a token at [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens)
+>  Enable repo, workflow, admin:org, admin:repo_hook, admin:org_hook while generating personal access token.
 
 ---
 
