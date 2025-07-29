@@ -1,0 +1,8 @@
+Error,Module,Reoccurrence
+'Home page not loaded. Navigated to URL: https://koenig-bauer-dev.eu.auth0.com/u/login?state=%s,MyKyana,6
+'Home page not loaded. Navigated to URL: https://mykyana-dev.koenig-bauer.com/auth/callback?error=access_denied&error_description=Failed%20to%20verify%20user%20status%20in%20Salesforce&state=%s,MyKyana,1
+'Error: Navigation timeout of 30000 ms exceeded,,1
+"'Polling for Selector error: Execution context was destroyed, most likely because of a navigation.",Kyana Data,1
+'Failed to find selector: Selector not found in any iframe for module 'data' at https://mykyana-dev.koenig-bauer.com/data: #dashboard-title,Kyana Data,1
+'Error: Selector not found in any iframe for module 'data' at https://mykyana-dev.koenig-bauer.com/data: #dashboard-title,Kyana Data,1
+'Error: Navigation timeout of 50000 ms exceeded,Kyana Data,1

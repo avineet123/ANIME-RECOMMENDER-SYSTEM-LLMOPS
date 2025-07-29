@@ -1,0 +1,27 @@
+spanId,ErrorTime,Error,Module
+10543304417454064984,2025-07-28 00:12:20.086865+00:00,"'Polling for Selector error: Execution context was destroyed, most likely because of a navigation.
+",Kyana Data
+10543304417454064984,2025-07-28 00:12:20.086914+00:00,"'Failed to find selector: Selector not found in any iframe for module 'data' at https://mykyana.koenig-bauer.com/data: #dashboard-title
+",Kyana Data
+10543304417454064984,2025-07-28 00:12:20.098472+00:00,"'Error: Selector not found in any iframe for module 'data' at https://mykyana.koenig-bauer.com/data: #dashboard-title
+",Kyana Data
+10552103339791113475,2025-07-27 18:00:42.757312+00:00,"'Home page not loaded. Navigated to URL: https://koenig-bauer-prod.eu.auth0.com/u/login?state=hKFo2SB5aUhCWTRjemhpZkhuMEU3czVlTW1WNDQwcE5fRUUzbKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1fTWRYNXF4OTdUNnhtRGk5QUMyVXQ1WnRsTkI5aVhpo2NpZNkgbmlveTJHb0ZOTmZQelpLVnJMN3ZZeGZkcTRmMEdHclM
+",MyKyana
+10552103339791113475,2025-07-27 18:01:55.490006+00:00,"'Error: Navigation timeout of 50000 ms exceeded
+",Kyana Data
+11704581340694429238,2025-07-26 20:48:37.919504+00:00,"'Home page not loaded. Navigated to URL: https://koenig-bauer-prod.eu.auth0.com/u/login?state=hKFo2SBVSzluQ0F1cjRhZUN2aVE4XzdEaFc3U3hQbzhnM0J5UaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJNR09NbXczY3dORk40NVF3Rl9FNUoweHRBczdQRWZ0o2NpZNkgbmlveTJHb0ZOTmZQelpLVnJMN3ZZeGZkcTRmMEdHclM
+",MyKyana
+11704581340694429238,2025-07-26 20:50:12.590935+00:00,"'Failed to find selector: Selector not found in any iframe for module 'data' at https://mykyana.koenig-bauer.com/data: #dashboard-title
+",Kyana Data
+11704581340694429238,2025-07-26 20:50:32.690386+00:00,"'Error: Selector not found in any iframe for module 'data' at https://mykyana.koenig-bauer.com/data: #dashboard-title
+",Kyana Data
+16173402881939048541,2025-07-28 04:02:57.289941+00:00,"'Error: Navigation timeout of 30000 ms exceeded
+",
+17453044209003912746,2025-07-28 06:12:39.185183+00:00,"'Home page not loaded. Navigated to URL: https://koenig-bauer-prod.eu.auth0.com/u/login?state=hKFo2SByWTNLMVN2bTFVZDhOcDRXQURMRjA3cnduTEtET0JOTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIF9PcUt4S05wdE5mdTVlNWxRNGszcW93cU9RclRJU25Do2NpZNkgbmlveTJHb0ZOTmZQelpLVnJMN3ZZeGZkcTRmMEdHclM
+",MyKyana
+17453044209003912746,2025-07-28 06:13:21.689665+00:00,"'Home page not loaded. Navigated to URL: https://koenig-bauer-prod.eu.auth0.com/u/login?state=hKFo2SBlZGN4NndhcGFXcldWVTlFQ2xkcC1tRURoNy1ZbjFpOKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFp4bDRIUXgyWFJhbGVUSG9QOU1LelRqU1JWcEJNZU1Co2NpZNkgbmlveTJHb0ZOTmZQelpLVnJMN3ZZeGZkcTRmMEdHclM
+",MyKyana
+17749194900417883936,2025-07-26 16:48:58.837879+00:00,"'Home page not loaded. Navigated to URL: https://mykyana.koenig-bauer.com/auth/callback?error=access_denied&error_description=ACTION_ERROR_TIMEOUT%3A%20Action%20execution%20timed%20out&state=dmN4Y1BRU0tzOUhzR3dFMXo4M19OeEs3MUR3NmJiSnIyYTVtM2FlNTRQLQ%3D%3D
+",MyKyana
+17749194900417883936,2025-07-26 16:50:29.490371+00:00,"'Error: Navigation timeout of 50000 ms exceeded
+",

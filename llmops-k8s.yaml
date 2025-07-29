@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+# Tells Kubernetes: "I want to deploy and manage an application."
+metadata:
+  name: llmops-app    # A unique name for your deployment.
+  labels:             # Tags used for identification (important for connecting with the service).
+    app: llmops     
+# How many copies of your app to run. Here, only 1 pod is running.
+spec:
+  replicas: 1
+
+# Selector: How to Find the Pods
+# This tells Kubernetes: "Look for pods with this label (app: llmops) to manage them."
+  selector:
+    matchLabels:
+      app: llmops
+#Template: How the Pod Should Look
+# Labels added to the Pod. This must match the selector above.
+  template:
+    metadata:
+      labels:
+        app: llmops
+#  Containers Inside the Pod
+# name: Your container's name.
+# image: The Docker image to use (assumes it’s built locally or available).
+# imagePullPolicy: IfNotPresent: Use the image from local cache if available, don’t try to pull it from DockerHub or other registry again.
+    spec:
+      containers:
+      - name: llmops-container
+        image: llmops-app:latest  # Use local image
+        imagePullPolicy: IfNotPresent
+# Ports
+# Tells Kubernetes that this app runs on port 8501 inside the container (like Streamlit).
+        ports:
+          - containerPort: 8501
+# Environment Variables from Secrets
+# Load all environment variables from a Kubernetes secret named llmops-secrets. Great for sensitive info like API keys.
+        envFrom:
+          - secretRef:
+              name: llmops-secrets 
+
+---
+# Service Block – Makes Your App Reachable 
+apiVersion: v1
+kind: Service  # This is a Service, which exposes your pod (app) on a stable IP and port.
+# The name of the service.
+metadata:
+  name: llmops-service
+# LoadBalancer: Exposes your app to the outside internet (useful in cloud environments like GKE, AWS, Azure).
+# In Minikube or local setups, use NodePort instead.
+spec:
+  type: LoadBalancer
+# Match pods that have the label app: llmops (same label you defined in the deployment).
+  selector:
+    app: llmops
+# Expose the app on port 80 to the world.
+# Internally, route that traffic to port 8501 in your container (which is what your Streamlit app uses).
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8501
