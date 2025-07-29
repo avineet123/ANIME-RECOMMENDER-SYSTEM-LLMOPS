@@ -1,7 +1,14 @@
 from langchain.prompts import PromptTemplate
 
 
-def get_anime_prompt():
+def get_anime_prompt() -> PromptTemplate:
+    """
+    Returns a well-structured prompt template for anime recommendation.
+    This prompt ensures the LLM responds with 3 anime suggestions, each with:
+      - Title
+      - 2-3 sentence summary
+      - Explanation for the match
+    """
     template = """
 You are an expert anime recommender. Your job is to help users find the perfect anime based on their preferences.
 
@@ -25,4 +32,7 @@ User's question:
 Your well-structured response:
 """
 
-    return PromptTemplate(template=template, input_variables=["context", "question"])
+    return PromptTemplate(
+        template=template,
+        input_variables=["context", "question"]
+    )

@@ -1,38 +1,36 @@
-# Logic for application
 import streamlit as st
-from pipeline.pipeline import AnimeRecommendationPipeline
 from dotenv import load_dotenv
+from pipeline.pipeline import AnimeRecommendationPipeline
 
-st.set_page_config(page_title="Anime Recommender",layout="wide")
+# Set Streamlit page configuration
+st.set_page_config(page_title="Anime Recommender", layout="wide")
 
-# during deployment , we run only app.py so it loads env 
+# Load environment variables (e.g., API keys)
 load_dotenv()
 
 @st.cache_resource
 def init_pipeline():
-    "when app start , it will initialize everything to save time, it will not run again again"
+    """
+    Initialize the recommendation pipeline once.
+    This prevents reloading on every user interaction, improving performance.
+    """
     return AnimeRecommendationPipeline()
 
-pipeline= init_pipeline()
+# Initialize the pipeline
+pipeline = init_pipeline()
 
+# App Title
 st.title("Anime Recommender System")
 
-query=st.text_input("Enter your anime preferences eg: light hearted anime with school settings")
+# User input: query based on anime preferences
+query = st.text_input("Enter your anime preferences (e.g., 'light-hearted anime with school settings')")
 
+# On user submission
 if query:
-    with st.spinner("fetching recommendation for you ...."):
-        response= pipeline.recommend(query)
-        st.markdown("### Recommendations")
-        st.write(response)
-
-
-
-
-
-
-
-
-
-
-
-
+    with st.spinner("Fetching recommendations for you..."):
+        try:
+            response = pipeline.recommend(query)
+            st.markdown("### Recommendations")
+            st.write(response)
+        except Exception as e:
+            st.error(f"Failed to generate recommendations. Error: {str(e)}")

@@ -7,22 +7,23 @@ class AnimeDataLoader:
         self.processed_csv = processed_csv
 
     def load_and_process(self):
-        df = pd.read_csv(
-            self.original_csv, encoding="utf-8", on_bad_lines="skip"
-        ).dropna()
-        required_cols = {"Name", "Genres", "sypnopsis"}
+        # Load the dataset
+        df = pd.read_csv(self.original_csv, encoding="utf-8", on_bad_lines="skip").dropna()
+
+        # Ensure required columns exist
+        required_cols = {"Name", "Genres", "sypnopsis"}  # fix to "synopsis" if needed
         missing_cols = required_cols - set(df.columns)
         if missing_cols:
-            return ValueError("Missing Columns in CSV file")
+            raise ValueError(f"Missing Columns in CSV file: {missing_cols}")
+
+        # Create a combined info string
         df["combine_info"] = (
-            "Title:"
-            + df["Name"]
-            + " Overview :"
-            + df["sypnopsis"]
-            + "Genres :"
-            + df["Genres"]
+            "Title: " + df["Name"] +
+            " Overview: " + df["sypnopsis"] +
+            " Genres: " + df["Genres"]
         )
 
+        # Save the processed CSV with just the combined info
         df[["combine_info"]].to_csv(self.processed_csv, index=False, encoding="utf-8")
 
         return self.processed_csv
