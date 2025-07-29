@@ -88,7 +88,7 @@ A **Large Language Model (LLM)-powered Anime Recommender System** built using **
 
    ```bash
    docker build -t anime-recommender .
-   minikube start --driver=docker
+   minikube start
    ```
 
 3. **Secrets**
@@ -99,11 +99,11 @@ A **Large Language Model (LLM)-powered Anime Recommender System** built using **
 4. **Deploy on K8s**
 
    ```bash
-   kubectl apply -f k8s.yaml
+   kubectl apply -f llmops-k8s.yaml
    minikube tunnel  # Run in a separate terminal to expose LoadBalancer
    ```
 
-### 📡 Service Types Explained
+### Service Types Explained
 
 | Type         | Use Case                        | Access                               |
 | ------------ | ------------------------------- | ------------------------------------ |
