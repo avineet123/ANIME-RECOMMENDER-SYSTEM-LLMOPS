@@ -527,17 +527,4 @@ gcloud compute instances delete anime-llmops-vm --zone=us-central1-a
 - [Grafana Cloud Documentation](https://grafana.com/docs/grafana-cloud/)
 
 ---
-
-## Next Steps
-
-1. **Production Deployment:** Consider using Google Kubernetes Engine (GKE) for production
-2. **CI/CD Pipeline:** Set up GitHub Actions for automated deployments  
-3. **HTTPS Setup:** Configure SSL certificates using Let's Encrypt
-4. **Database Integration:** Add persistent storage for user preferences
-5. **Scaling:** Implement horizontal pod autoscaling based on metrics
-
----
-
-**Happy Deploying! **
-
 > 💡 **Important:** Remember to monitor your GCP usage to avoid unexpected charges. Consider setting up billing alerts and resource quotas for cost management.
